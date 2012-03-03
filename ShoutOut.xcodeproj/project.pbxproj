@@ -84,8 +84,6 @@
 		87F240B51502BD7200678277 = {
 			isa = PBXGroup;
 			children = (
-				87F241041502DF9300678277 /* CoreLocation.framework */,
-				87F240E61502C48100678277 /* MapKit.framework */,
 				87F240CC1502BD7200678277 /* ShoutOut */,
 				87F240C31502BD7200678277 /* Frameworks */,
 				87F240C11502BD7200678277 /* Products */,
@@ -103,6 +101,8 @@
 		87F240C31502BD7200678277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				87F241041502DF9300678277 /* CoreLocation.framework */,
+				87F240E61502C48100678277 /* MapKit.framework */,
 				87F240C41502BD7200678277 /* UIKit.framework */,
 				87F240C61502BD7200678277 /* Foundation.framework */,
 				87F240C81502BD7200678277 /* CoreGraphics.framework */,

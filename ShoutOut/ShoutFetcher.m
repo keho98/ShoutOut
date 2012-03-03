@@ -13,7 +13,7 @@
 
 + (NSDictionary *)shoutQueryWithLongitude:(NSString *)longitude latitude:(NSString *)latitude
 {
-	NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?%@&api_key=%@&format=json&nojsoncallback=1", longitude, latitude];
+	NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?lat=%@&=long=%@&", longitude, latitude];
 	NSLog(@"Sent to Flickr: %@", urlString);
 	return [[NSString stringWithContentsOfURL:[NSURL URLWithString:urlString] encoding:NSUTF8StringEncoding error:nil] JSONValue];
 }
