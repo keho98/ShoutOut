@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87F240C51502BD7200678277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C41502BD7200678277 /* UIKit.framework */; };
+		87F240C71502BD7200678277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C61502BD7200678277 /* Foundation.framework */; };
+		87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C81502BD7200678277 /* CoreGraphics.framework */; };
+		87F240CB1502BD7200678277 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240CA1502BD7200678277 /* CoreData.framework */; };
+		87F240D11502BD7200678277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F240CF1502BD7200678277 /* InfoPlist.strings */; };
+		87F240D31502BD7200678277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D21502BD7200678277 /* main.m */; };
+		87F240D71502BD7200678277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D61502BD7200678277 /* AppDelegate.m */; };
+		87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		87F240C01502BD7200678277 /* ShoutOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoutOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F240C41502BD7200678277 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		87F240C81502BD7200678277 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		87F240CA1502BD7200678277 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		87F240CE1502BD7200678277 /* ShoutOut-Info.plist */ = {isa = PBXFileReference; path = "ShoutOut-Info.plist"; sourceTree = "<group>"; };
+		87F240D01502BD7200678277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		87F240D21502BD7200678277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87F240D41502BD7200678277 /* ShoutOut-Prefix.pch */ = {isa = PBXFileReference; path = "ShoutOut-Prefix.pch"; sourceTree = "<group>"; };
+		87F240D51502BD7200678277 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		87F240D61502BD7200678277 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87F240D91502BD7200678277 /* ShoutOut.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoutOut.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87F240BD1502BD7200678277 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F240C51502BD7200678277 /* UIKit.framework in Frameworks */,
+				87F240C71502BD7200678277 /* Foundation.framework in Frameworks */,
+				87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */,
+				87F240CB1502BD7200678277 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87F240B51502BD7200678277 = {
+			isa = PBXGroup;
+			children = (
+				87F240CC1502BD7200678277 /* ShoutOut */,
+				87F240C31502BD7200678277 /* Frameworks */,
+				87F240C11502BD7200678277 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87F240C11502BD7200678277 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87F240C01502BD7200678277 /* ShoutOut.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87F240C31502BD7200678277 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F240C41502BD7200678277 /* UIKit.framework */,
+				87F240C61502BD7200678277 /* Foundation.framework */,
+				87F240C81502BD7200678277 /* CoreGraphics.framework */,
+				87F240CA1502BD7200678277 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87F240CC1502BD7200678277 /* ShoutOut */ = {
+			isa = PBXGroup;
+			children = (
+				87F240D51502BD7200678277 /* AppDelegate.h */,
+				87F240D61502BD7200678277 /* AppDelegate.m */,
+				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
+				87F240CD1502BD7200678277 /* Supporting Files */,
+			);
+			path = ShoutOut;
+			sourceTree = "<group>";
+		};
+		87F240CD1502BD7200678277 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				87F240CE1502BD7200678277 /* ShoutOut-Info.plist */,
+				87F240CF1502BD7200678277 /* InfoPlist.strings */,
+				87F240D21502BD7200678277 /* main.m */,
+				87F240D41502BD7200678277 /* ShoutOut-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87F240BF1502BD7200678277 /* ShoutOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F240DD1502BD7200678277 /* Build configuration list for PBXNativeTarget "ShoutOut" */;
+			buildPhases = (
+				87F240BC1502BD7200678277 /* Sources */,
+				87F240BD1502BD7200678277 /* Frameworks */,
+				87F240BE1502BD7200678277 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShoutOut;
+			productName = ShoutOut;
+			productReference = 87F240C01502BD7200678277 /* ShoutOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87F240B71502BD7200678277 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 87F240BA1502BD7200678277 /* Build configuration list for PBXProject "ShoutOut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 87F240B51502BD7200678277;
+			productRefGroup = 87F240C11502BD7200678277 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87F240BF1502BD7200678277 /* ShoutOut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87F240BE1502BD7200678277 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87F240BC1502BD7200678277 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F240D31502BD7200678277 /* main.m in Sources */,
+				87F240D71502BD7200678277 /* AppDelegate.m in Sources */,
+				87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		87F240CF1502BD7200678277 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87F240D01502BD7200678277 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87F240DB1502BD7200678277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		87F240DC1502BD7200678277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87F240DE1502BD7200678277 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShoutOut/ShoutOut-Prefix.pch";
+				INFOPLIST_FILE = "ShoutOut/ShoutOut-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		87F240DF1502BD7200678277 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShoutOut/ShoutOut-Prefix.pch";
+				INFOPLIST_FILE = "ShoutOut/ShoutOut-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87F240BA1502BD7200678277 /* Build configuration list for PBXProject "ShoutOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F240DB1502BD7200678277 /* Debug */,
+				87F240DC1502BD7200678277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87F240DD1502BD7200678277 /* Build configuration list for PBXNativeTarget "ShoutOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F240DE1502BD7200678277 /* Debug */,
+				87F240DF1502BD7200678277 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87F240D91502BD7200678277 /* ShoutOut.xcdatamodel */,
+			);
+			currentVersion = 87F240D91502BD7200678277 /* ShoutOut.xcdatamodel */;
+			path = ShoutOut.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87F240B71502BD7200678277 /* Project object */;
+}
