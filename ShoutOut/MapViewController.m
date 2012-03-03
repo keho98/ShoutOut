@@ -52,6 +52,7 @@
     NSLog(@"%f, %f", location.latitude, location.longitude);
     location.longitude = -122.4192;
     location.latitude = 37.7793;
+    //# LOL
     NSString * longitude = [NSString stringWithFormat:@"%f", location.longitude];
     NSString * latitude = [NSString stringWithFormat:@"%f", location.latitude];
     region.span=span;
