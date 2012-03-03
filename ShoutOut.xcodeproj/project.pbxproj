@@ -15,6 +15,9 @@
 		87F240D31502BD7200678277 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D21502BD7200678277 /* main.m */; };
 		87F240D71502BD7200678277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D61502BD7200678277 /* AppDelegate.m */; };
 		87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */; };
+		87F240E21502BF4C00678277 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E11502BF4C00678277 /* MapViewController.m */; };
+		87F240E51502BF6300678277 /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E41502BF6300678277 /* ShoutCreateViewController.m */; };
+		87F240E71502C48100678277 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240E61502C48100678277 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +26,18 @@
 		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		87F240C81502BD7200678277 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		87F240CA1502BD7200678277 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		87F240CE1502BD7200678277 /* ShoutOut-Info.plist */ = {isa = PBXFileReference; path = "ShoutOut-Info.plist"; sourceTree = "<group>"; };
+		87F240CE1502BD7200678277 /* ShoutOut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShoutOut-Info.plist"; sourceTree = "<group>"; };
 		87F240D01502BD7200678277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87F240D21502BD7200678277 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		87F240D41502BD7200678277 /* ShoutOut-Prefix.pch */ = {isa = PBXFileReference; path = "ShoutOut-Prefix.pch"; sourceTree = "<group>"; };
-		87F240D51502BD7200678277 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		87F240D41502BD7200678277 /* ShoutOut-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShoutOut-Prefix.pch"; sourceTree = "<group>"; };
+		87F240D51502BD7200678277 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		87F240D61502BD7200678277 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		87F240D91502BD7200678277 /* ShoutOut.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoutOut.xcdatamodel; sourceTree = "<group>"; };
+		87F240E01502BF4C00678277 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		87F240E11502BF4C00678277 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		87F240E31502BF6300678277 /* ShoutCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutCreateViewController.h; sourceTree = "<group>"; };
+		87F240E41502BF6300678277 /* ShoutCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutCreateViewController.m; sourceTree = "<group>"; };
+		87F240E61502C48100678277 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F240E71502C48100678277 /* MapKit.framework in Frameworks */,
 				87F240C51502BD7200678277 /* UIKit.framework in Frameworks */,
 				87F240C71502BD7200678277 /* Foundation.framework in Frameworks */,
 				87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +59,7 @@
 		87F240B51502BD7200678277 = {
 			isa = PBXGroup;
 			children = (
+				87F240E61502C48100678277 /* MapKit.framework */,
 				87F240CC1502BD7200678277 /* ShoutOut */,
 				87F240C31502BD7200678277 /* Frameworks */,
 				87F240C11502BD7200678277 /* Products */,
@@ -80,6 +90,10 @@
 			children = (
 				87F240D51502BD7200678277 /* AppDelegate.h */,
 				87F240D61502BD7200678277 /* AppDelegate.m */,
+				87F240E31502BF6300678277 /* ShoutCreateViewController.h */,
+				87F240E41502BF6300678277 /* ShoutCreateViewController.m */,
+				87F240E01502BF4C00678277 /* MapViewController.h */,
+				87F240E11502BF4C00678277 /* MapViewController.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
 				87F240CD1502BD7200678277 /* Supporting Files */,
 			);
@@ -161,6 +175,8 @@
 				87F240D31502BD7200678277 /* main.m in Sources */,
 				87F240D71502BD7200678277 /* AppDelegate.m in Sources */,
 				87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */,
+				87F240E21502BF4C00678277 /* MapViewController.m in Sources */,
+				87F240E51502BF6300678277 /* ShoutCreateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

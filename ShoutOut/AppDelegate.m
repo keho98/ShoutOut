@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ShoutCreateViewController.h"
+#import "MapViewController.h"
 
 @implementation AppDelegate
 
@@ -18,8 +20,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    MapViewController * view1 = [[MapViewController alloc] init];
+    ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] init];    
+    
+    UITabBarController * tbc = [[UITabBarController alloc] init];
+    tbc.viewControllers = [NSArray arrayWithObjects:view1,view2, nil];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
     return YES;
 }
