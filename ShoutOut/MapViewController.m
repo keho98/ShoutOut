@@ -43,14 +43,19 @@
     [super viewDidLoad];
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.showsUserLocation=TRUE;
+    mapView.mapType=MKMapTypeHybrid;
     MKCoordinateRegion region;
     MKCoordinateSpan span;
-    span.latitudeDelta=0.2;
-    span.longitudeDelta=0.2;
+    span.latitudeDelta=0.025;
+    span.longitudeDelta=0.025;
     CLLocationCoordinate2D location=mapView.userLocation.coordinate;
+    NSLog(@"%f, %f", location.latitude, location.longitude);
+    location.longitude = -122.4192;
+    location.latitude = 37.7793;
     region.span=span;
     region.center=location;
-    //[mapView setRegion:region animated:FALSE];
+    //[mapView setCenterCoordinate:location];
+    [mapView setRegion:region animated:FALSE];
     //[mapView regionThatFits:region];
     [self.view insertSubview:mapView atIndex:0];
 }
