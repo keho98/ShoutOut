@@ -11,5 +11,6 @@
 
 @interface MapViewController : UIViewController{
     MKMapView * mapView;
+    CLGeocoder * geoCoder;
 }
 @end
