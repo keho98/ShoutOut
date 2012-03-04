@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import "ShoutFetcher.h"
 #import "Shout.h"
+#import "DropPin.h"
 
 @implementation MapViewController
 
@@ -66,6 +67,25 @@
     location.latitude = 37.7793;
     location.longitude = -122.4192;
     
+    region.span=span;
+    region.center=location;
+    //[mapView setCenterCoordinate:location];
+    [mapView setRegion:region animated:TRUE];
+    //[mapView regionThatFits:region];
+    [self.view addSubview:mapView];
+    
+    /*for (int i = 0; i < 5; i++) {
+        CGFloat latDelta = rand()*.035/RAND_MAX - .02;
+        CGFloat longDelta = rand()*.03/RAND_MAX - .015;
+        
+        CLLocationCoordinate2D coords = {location.latitude+latDelta, location.longitude+longDelta};
+        DropPin *pin = [[DropPin alloc] initWithCoordinate:coords];
+        [mapView addAnnotation:pin];
+    }*/
+    
+    //[self.view insertSubview:mapView atIndex:0];
+    
+    
     NSString * mylong = [NSString stringWithFormat:@"%f", location.longitude];
     NSString * mylat = [NSString stringWithFormat:@"%f", location.latitude];
     
@@ -75,8 +95,8 @@
     [testDictionary setObject:@"Hobo" forKey:@"title"];
     [testDictionary setObject:@"He's playing a shiny guitar!" forKey:@"description"];
     [testDictionary setObject:@"20" forKey:@"popularity"];
-    [testDictionary setObject:@"37.7793" forKey:@"latitude"];
-    [testDictionary setObject:@"-122.4192" forKey:@"longitude"];
+    [testDictionary setObject:@"37.7783" forKey:@"latitude"];
+    [testDictionary setObject:@"-122.4182" forKey:@"longitude"];
     [testDictionary setObject:@"Sat, 03 Mar 2012 23:16:37 UTC +00:00" forKey:@"created_at"];
     [testDictionary setObject:@"Sat, 03 Mar 2012 23:16:37 UTC +00:00" forKey:@"updated_at"];
     
@@ -126,6 +146,9 @@
                                         createdAt:[NSString stringWithFormat:@"%@", createdAt] 
                                         updatedAt:[NSString stringWithFormat:@"%@", updatedAt] ];
         
+        CLLocationCoordinate2D coord = {shout.latitude, shout.longitude};
+        DropPin *pin = [[DropPin alloc] initWithCoordinate:coord];
+        [mapView addAnnotation:pin];
         [shoutsArray addObject:shout];
     }
     
@@ -136,13 +159,6 @@
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] latitude]);
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] longitude]);
     NSLog(@"Num of Events: %i", [shoutsArray count]);
-    
-    region.span=span;
-    region.center=location;
-    //[mapView setCenterCoordinate:location];
-    [mapView setRegion:region animated:FALSE];
-    //[mapView regionThatFits:region];
-    [self.view insertSubview:mapView atIndex:0];
 }
 
 
