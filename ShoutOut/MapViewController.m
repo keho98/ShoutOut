@@ -189,6 +189,7 @@
         UIImage *image = [UIImage imageNamed:@"location.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         imageView.center = CGPointMake(0, -image.size.height/2);
+        imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
         [annView addSubview:imageView];
         
         //LEAVE HERE-The 1st and 4th lines directly below are needed for red pins
@@ -201,6 +202,11 @@
     }
     return nil;
 }
+
+//http://lists.apple.com/archives/cocoa-dev/2010/Aug/msg00718.html
+//http://stackoverflow.com/questions/6941199/how-to-get-click-event-from-a-button-added-over-mkannotationview
+//http://www.cocoabuilder.com/archive/cocoa/292188-iphone-add-touches-to-mkannotationview.html
+//https://www.google.com/search?hl=en&client=firefox-a&hs=c5u&rls=org.mozilla%3Aen-US%3Aofficial&q=MKAnnotationView+UIImageview+touch+event&oq=MKAnnotationView+UIImageview+touch+event&aq=f&aqi=&aql=&gs_sm=3&gs_upl=1315556l1316687l0l1316899l11l9l0l0l0l0l197l1178l1.8l9l0&gs_l=serp.3...1315556l1316687l0l1316899l11l9l0l0l0l0l197l1178l1j8l9l0
 
 
 - (void)viewDidUnload
