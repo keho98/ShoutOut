@@ -16,7 +16,6 @@
 		87F240D71502BD7200678277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D61502BD7200678277 /* AppDelegate.m */; };
 		87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */; };
 		87F240E21502BF4C00678277 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E11502BF4C00678277 /* MapViewController.m */; };
-		87F240E51502BF6300678277 /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E41502BF6300678277 /* ShoutCreateViewController.m */; };
 		87F240E71502C48100678277 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240E61502C48100678277 /* MapKit.framework */; };
 		87F240FE1502DD4000678277 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240F31502DD4000678277 /* NSObject+SBJSON.m */; };
 		87F240FF1502DD4000678277 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240F51502DD4000678277 /* NSString+SBJSON.m */; };
@@ -26,8 +25,10 @@
 		87F241031502DD4000678277 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240FD1502DD4000678277 /* SBJsonWriter.m */; };
 		87F241051502DF9300678277 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F241041502DF9300678277 /* CoreLocation.framework */; };
 		87F241081502E11C00678277 /* ShoutFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F241071502E11C00678277 /* ShoutFetcher.m */; };
-		A8702D451502EC560030F00D /* notuploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = A8702D441502EC560030F00D /* notuploaded.png */; };
-		A8C684EB1502FC0800605446 /* Shout.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C684EA1502FC0800605446 /* Shout.m */; };
+		A8702D451502EC560030F00D /* (null) in Resources */ = {isa = PBXBuildFile; };
+		A8C684EB1502FC0800605446 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A8DC4D3F15032F3E0042A6B6 /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */; };
+		A8DC4D4215032F740042A6B6 /* Shout.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DC4D4115032F740042A6B6 /* Shout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,10 @@
 		87F241041502DF9300678277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		87F241061502E11B00678277 /* ShoutFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutFetcher.h; sourceTree = "<group>"; };
 		87F241071502E11C00678277 /* ShoutFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutFetcher.m; sourceTree = "<group>"; };
+		A8DC4D3D15032F3E0042A6B6 /* ShoutCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutCreateViewController.h; sourceTree = "<group>"; };
+		A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutCreateViewController.m; sourceTree = "<group>"; };
+		A8DC4D4015032F6A0042A6B6 /* Shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shout.h; sourceTree = "<group>"; };
+		A8DC4D4115032F740042A6B6 /* Shout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +121,14 @@
 			children = (
 				87F240D51502BD7200678277 /* AppDelegate.h */,
 				87F240D61502BD7200678277 /* AppDelegate.m */,
-				87F240E31502BF6300678277 /* ShoutCreateViewController.h */,
-				87F240E41502BF6300678277 /* ShoutCreateViewController.m */,
 				87F240E01502BF4C00678277 /* MapViewController.h */,
 				87F240E11502BF4C00678277 /* MapViewController.m */,
 				87F241061502E11B00678277 /* ShoutFetcher.h */,
 				87F241071502E11C00678277 /* ShoutFetcher.m */,
+				A8DC4D3D15032F3E0042A6B6 /* ShoutCreateViewController.h */,
+				A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */,
+				A8DC4D4015032F6A0042A6B6 /* Shout.h */,
+				A8DC4D4115032F740042A6B6 /* Shout.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
 				87F240F01502DD4000678277 /* JSON */,
 				87F240CD1502BD7200678277 /* Supporting Files */,
@@ -211,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
-				A8702D451502EC560030F00D /* notuploaded.png in Resources */,
+				A8702D451502EC560030F00D /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +240,9 @@
 				87F241021502DD4000678277 /* SBJsonParser.m in Sources */,
 				87F241031502DD4000678277 /* SBJsonWriter.m in Sources */,
 				87F241081502E11C00678277 /* ShoutFetcher.m in Sources */,
-				A8C684EB1502FC0800605446 /* Shout.m in Sources */,
+				A8C684EB1502FC0800605446 /* (null) in Sources */,
+				A8DC4D3F15032F3E0042A6B6 /* ShoutCreateViewController.m in Sources */,
+				A8DC4D4215032F740042A6B6 /* Shout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

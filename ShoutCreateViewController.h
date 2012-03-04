@@ -2,16 +2,12 @@
 //  ShoutCreateViewController.h
 //  ShoutOut
 //
-//  Created by Kevin Ho on 3/3/12.
+//  Created by Forrest Browning on 3/3/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ShoutCreateViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextField *Textfield;
-@property (weak, nonatomic) IBOutlet UITextField *Description;
-
-
+@interface ShoutCreateViewController : NSObject
 
 @end
