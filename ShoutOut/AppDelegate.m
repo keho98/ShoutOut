@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     MapViewController * view1 = [[MapViewController alloc] init];
-    ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] init];    
+    ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] initWithNibName:@"ShoutCreateViewController" bundle:nil];    
     
     UITabBarController * tbc = [[UITabBarController alloc] init];
     tbc.viewControllers = [NSArray arrayWithObjects:view1,view2, nil];
