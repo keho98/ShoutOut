@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */; };
+		87713AAE1503637E00CA6EE3 /* notuploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AAC1503637E00CA6EE3 /* notuploaded.png */; };
+		87713AAF1503637E00CA6EE3 /* noun_project_107.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AAD1503637E00CA6EE3 /* noun_project_107.png */; };
 		87F240C51502BD7200678277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C41502BD7200678277 /* UIKit.framework */; };
 		87F240C71502BD7200678277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C61502BD7200678277 /* Foundation.framework */; };
 		87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C81502BD7200678277 /* CoreGraphics.framework */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutCreateViewController.xib; sourceTree = "<group>"; };
+		87713AAC1503637E00CA6EE3 /* notuploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notuploaded.png; sourceTree = "<group>"; };
+		87713AAD1503637E00CA6EE3 /* noun_project_107.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_107.png; sourceTree = "<group>"; };
 		87F240C01502BD7200678277 /* ShoutOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoutOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F240C41502BD7200678277 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87713AAB1503637E00CA6EE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87713AAC1503637E00CA6EE3 /* notuploaded.png */,
+				87713AAD1503637E00CA6EE3 /* noun_project_107.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		87F240B51502BD7200678277 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +151,7 @@
 				A8DC4D4015032F6A0042A6B6 /* Shout.h */,
 				A8DC4D4115032F740042A6B6 /* Shout.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
+				87713AAB1503637E00CA6EE3 /* Resources */,
 				87F240F01502DD4000678277 /* JSON */,
 				87F240CD1502BD7200678277 /* Supporting Files */,
 			);
@@ -228,6 +242,8 @@
 				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
 				A8702D451502EC560030F00D /* (null) in Resources */,
 				874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */,
+				87713AAE1503637E00CA6EE3 /* notuploaded.png in Resources */,
+				87713AAF1503637E00CA6EE3 /* noun_project_107.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
