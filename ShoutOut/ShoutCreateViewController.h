@@ -11,7 +11,7 @@
 @interface ShoutCreateViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *Textfield;
 @property (strong, nonatomic) IBOutlet UITextField *Description;
-@property (strong, nonatomic) IBOutlet UIImageView *image;
+@property (strong, nonatomic) IBOutlet UIImageView *imageIcon;
 @property (strong, nonatomic) IBOutlet UIImageView *camera;
 
 @end

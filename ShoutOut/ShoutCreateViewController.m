@@ -11,7 +11,7 @@
 @implementation ShoutCreateViewController
 @synthesize Textfield;
 @synthesize Description;
-@synthesize image;
+@synthesize imageIcon;
 @synthesize camera;
 
 
@@ -23,7 +23,8 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage * newImage =[info objectForKey:UIImagePickerControllerOriginalImage];
-    self.image.image = newImage;
+    [(UIImageView*)[self.view viewWithTag:1] setImage:newImage];
+    //self.imageIcon.image = newImage; DOES NOT WORK
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
     
 }
@@ -100,8 +101,8 @@
     [self setTextfield:nil];
     [self setDescription:nil];
     [self setDescription:nil];
-    [self setImage:nil];
-    [self setImage:nil];
+    [self setImageIcon:nil];
+    [self setImageIcon:nil];
     [self setCamera:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
