@@ -56,6 +56,7 @@
 {
     [super viewDidLoad];
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+    mapView.delegate = self;
     mapView.showsUserLocation=TRUE;
     mapView.mapType=MKMapTypeHybrid;
     MKCoordinateRegion region;
@@ -159,6 +160,19 @@
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] latitude]);
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] longitude]);
     NSLog(@"Num of Events: %i", [shoutsArray count]);
+}
+
+-(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
+    if (pinView == nil){
+        [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+        pinView.pinColor = MKPinAnnotationColorPurple;
+        pinView.animatesDrop = YES;
+    } 
+    else
+        pinView.annotation = annotation;
+    
+    return pinView;
 }
 
 

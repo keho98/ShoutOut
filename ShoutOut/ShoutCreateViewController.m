@@ -26,7 +26,6 @@
     [(UIImageView*)[self.view viewWithTag:1] setImage:newImage];
     //self.imageIcon.image = newImage; DOES NOT WORK
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
-    
 }
 
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
