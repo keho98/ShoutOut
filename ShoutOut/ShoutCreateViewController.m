@@ -24,6 +24,7 @@
 {
     UIImage * newImage =[info objectForKey:UIImagePickerControllerOriginalImage];
     self.image.image = newImage;
+    [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
     
 }
 
