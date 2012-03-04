@@ -22,10 +22,6 @@
 /* UIImagePickerControllerDelegate Functions */
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    //[self.imageIcon performSelectorOnMainThread:@selector(setImage:) withObject: [info objectForKey:UIImagePickerControllerOriginalImage] waitUntilDone:YES];
-    //[self setImageIcon:[info objectForKey:UIImagePickerControllerOriginalImage]];
-    //self.imageIcon.image = newImage; DOES NOT WORK
-    //UIImage * image = [info objectForKey:UIImagePickerControllerOriginalImage];
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
     UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     [(UIImageView*)[self.view viewWithTag:8] setImage:newImage];
@@ -36,17 +32,6 @@
     [[picker presentingViewController] dismissModalViewControllerAnimated: YES];
 }
 
-- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    
-    NSLog(@"I GOT HEREREEEEEEEEEEEE");
-    
-    [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
-    
-    //UIImage *image = [UIImage imageNamed:@"notuploaded.png"];
-    [(UIImageView*)[self.view viewWithTag:8] setImage:image];
-    
-    
-}
 
 - (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
                                    usingDelegate: (id <UIImagePickerControllerDelegate>) delegate {
