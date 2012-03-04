@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface DropPin : NSObject <MKAnnotation> {
+@interface DropPin : MKAnnotationView <MKAnnotation> {
     CLLocationCoordinate2D coordinate;
+    
+    UIImage *image;
 }
 
 @property(nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property(strong, nonatomic) UIImage *image;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)coord;
+
+- (NSString *)title;
 
 @end

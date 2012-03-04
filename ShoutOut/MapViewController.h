@@ -7,14 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController<MKMapViewDelegate> {
+@interface MapViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate> {
     MKMapView * mapView;
     CLGeocoder * geoCoder;
+    CLLocationCoordinate2D location;
+    
+    
+    CLLocationManager *locationManager;
 }
 
+;
 @property(strong, nonatomic) NSMutableArray *shoutsArray;
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 -(void)populateWithEvents:(NSArray*)allShouts;
 

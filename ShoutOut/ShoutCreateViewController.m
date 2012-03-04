@@ -23,6 +23,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
+    [(UIImageView*)[self.view viewWithTag:8] setContentMode: UIViewContentModeScaleAspectFit];
     UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     [(UIImageView*)[self.view viewWithTag:8] setImage:newImage];
 }
@@ -60,8 +61,15 @@
 
 
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
-    [self startCameraControllerFromViewController: self usingDelegate: self];
-    
+    if(sender.state == UIGestureRecognizerStateBegan){
+        [(UIImageView*)[self.view viewWithTag:8] setBackgroundColor:[UIColor greenColor]];
+        [(UIImageView*)[self.view viewWithTag:8] setNeedsDisplay];
+    }
+    else if(sender.state == UIGestureRecognizerStateEnded){
+        [(UIImageView*)[self.view viewWithTag:8] setBackgroundColor:[UIColor whiteColor]];
+        //[(UIImageView*)[self.view viewWithTag:8] setNeedsDisplay];
+        [self startCameraControllerFromViewController: self usingDelegate: self];
+    }
 }
 
 //Submit command
@@ -72,6 +80,7 @@
     float longitude = 6.6659;
     NSString *url = [NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/closestEvents/?user_id=%@&latitude=%@&=longitude=%@&", [NSString stringWithFormat:@"%i",user_id],[NSString stringWithFormat:@"%f",latitude], [NSString stringWithFormat:@"%f",longitude], Textfield.text, Description.text];
     [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [(UITabBarController*) self.parentViewController setSelectedIndex:0];
 }
 
 

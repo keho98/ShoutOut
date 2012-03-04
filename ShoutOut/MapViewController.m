@@ -50,29 +50,46 @@
     ((Shout *)[shoutsArray objectAtIndex:index]).updatedAt = [NSString stringWithFormat:@"%@", [shout objectForKey:@"updated_at"]];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    span.latitudeDelta=0.025;
+    span.longitudeDelta=0.025;
+    location = newLocation.coordinate;
+    region.center = location;
+    region.span=span;
+    region.center=location;
+    [mapView setRegion:region animated:FALSE];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+    locationManager.distanceFilter = 5;
+    [locationManager startUpdatingLocation];
+    
     mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     mapView.delegate = self;
     mapView.showsUserLocation=TRUE;
     mapView.mapType=MKMapTypeHybrid;
+    
     MKCoordinateRegion region;
     MKCoordinateSpan span;
-    span.latitudeDelta=0.025;
-    span.longitudeDelta=0.025;
-    CLLocationCoordinate2D location = mapView.userLocation.coordinate;
-    //NSLog(@"%f, %f", location.latitude, location.longitude);
     location.latitude = 37.7793;
     location.longitude = -122.4192;
+    region.center = location;
+    region.span = span;
     
-    region.span=span;
-    region.center=location;
-    //[mapView setCenterCoordinate:location];
-    [mapView setRegion:region animated:TRUE];
-    //[mapView regionThatFits:region];
+    [mapView setRegion:region animated:FALSE];
     [self.view addSubview:mapView];
     
     /*for (int i = 0; i < 5; i++) {
@@ -83,8 +100,6 @@
         DropPin *pin = [[DropPin alloc] initWithCoordinate:coords];
         [mapView addAnnotation:pin];
     }*/
-    
-    //[self.view insertSubview:mapView atIndex:0];
     
     
     NSString * mylong = [NSString stringWithFormat:@"%f", location.longitude];
@@ -150,6 +165,7 @@
         
         CLLocationCoordinate2D coord = {shout.latitude, shout.longitude};
         DropPin *pin = [[DropPin alloc] initWithCoordinate:coord];
+        pin.image = [UIImage imageNamed:@"notuploaded.png"];
         [mapView addAnnotation:pin];
         [shoutsArray addObject:shout];
     }
@@ -163,17 +179,27 @@
     NSLog(@"Num of Events: %i", [shoutsArray count]);
 }
 
--(MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
-    MKPinAnnotationView *pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"Pin"];
-    if (pinView == nil){
-        [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
-        pinView.pinColor = MKPinAnnotationColorPurple;
-        pinView.animatesDrop = YES;
-    } 
-    else
-        pinView.annotation = annotation;
+-(MKAnnotationView*)mapView:(MKMapView *)mapViews viewForAnnotation:(id<MKAnnotation>)annotation{
     
-    return pinView;
+    if ([annotation isKindOfClass:[DropPin class]]) {
+        static NSString *AnnotationIdentifier = @"AnnotationIdentifier";
+        MKAnnotationView *annView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+
+        
+        UIImage *image = [UIImage imageNamed:@"location.png"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.center = CGPointMake(0, -image.size.height/2);
+        [annView addSubview:imageView];
+        
+        //LEAVE HERE-The 1st and 4th lines directly below are needed for red pins
+        //MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+        //pinView.canShowCallout = YES;
+        //pinView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:((DropPin *)annotation).image];
+        //[annView addSubview:pinView];
+        
+        return annView;
+    }
+    return nil;
 }
 
 

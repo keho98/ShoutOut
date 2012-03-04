@@ -10,7 +10,7 @@
 
 @implementation DropPin
 
-@synthesize coordinate;
+@synthesize coordinate, image;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)coord {
     self = [super init];
@@ -18,6 +18,10 @@
         coordinate = coord;
     }
     return self;
+}
+
+- (NSString *)title {
+    return @"WHAT!?";
 }
 
 @end
