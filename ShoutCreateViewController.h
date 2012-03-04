@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ShoutCreateViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *Textfield;
+@property (weak, nonatomic) IBOutlet UITextField *Description;
+
+
 
 @end

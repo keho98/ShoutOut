@@ -9,6 +9,8 @@
 #import "ShoutCreateViewController.h"
 
 @implementation ShoutCreateViewController
+@synthesize Textfield;
+@synthesize Description;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,13 +31,6 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,6 +48,9 @@
 
 - (void)viewDidUnload
 {
+    [self setTextfield:nil];
+    [self setDescription:nil];
+    [self setDescription:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
