@@ -26,6 +26,7 @@
 		87F241031502DD4000678277 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240FD1502DD4000678277 /* SBJsonWriter.m */; };
 		87F241051502DF9300678277 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F241041502DF9300678277 /* CoreLocation.framework */; };
 		87F241081502E11C00678277 /* ShoutFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F241071502E11C00678277 /* ShoutFetcher.m */; };
+		A8427645150353B800D26C68 /* DropPin.m in Sources */ = {isa = PBXBuildFile; fileRef = A8427644150353B800D26C68 /* DropPin.m */; };
 		A8702D451502EC560030F00D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A8C684EB1502FC0800605446 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		A8DC4D3F15032F3E0042A6B6 /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */; };
@@ -65,6 +66,8 @@
 		87F241041502DF9300678277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		87F241061502E11B00678277 /* ShoutFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutFetcher.h; sourceTree = "<group>"; };
 		87F241071502E11C00678277 /* ShoutFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutFetcher.m; sourceTree = "<group>"; };
+		A8427643150353B800D26C68 /* DropPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropPin.h; sourceTree = "<group>"; };
+		A8427644150353B800D26C68 /* DropPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropPin.m; sourceTree = "<group>"; };
 		A8DC4D3D15032F3E0042A6B6 /* ShoutCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutCreateViewController.h; sourceTree = "<group>"; };
 		A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutCreateViewController.m; sourceTree = "<group>"; };
 		A8DC4D4015032F6A0042A6B6 /* Shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shout.h; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */,
 				87F240E01502BF4C00678277 /* MapViewController.h */,
 				87F240E11502BF4C00678277 /* MapViewController.m */,
+				A8427643150353B800D26C68 /* DropPin.h */,
+				A8427644150353B800D26C68 /* DropPin.m */,
 				87F241061502E11B00678277 /* ShoutFetcher.h */,
 				87F241071502E11C00678277 /* ShoutFetcher.m */,
 				A8DC4D4015032F6A0042A6B6 /* Shout.h */,
@@ -247,6 +252,7 @@
 				A8C684EB1502FC0800605446 /* (null) in Sources */,
 				A8DC4D3F15032F3E0042A6B6 /* ShoutCreateViewController.m in Sources */,
 				A8DC4D4215032F740042A6B6 /* Shout.m in Sources */,
+				A8427645150353B800D26C68 /* DropPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
