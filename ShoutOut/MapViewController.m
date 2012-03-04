@@ -165,6 +165,7 @@
         
         CLLocationCoordinate2D coord = {shout.latitude, shout.longitude};
         DropPin *pin = [[DropPin alloc] initWithCoordinate:coord];
+        pin.shout_id = shout.shoutID;
         pin.image = [UIImage imageNamed:@"notuploaded.png"];
         [mapView addAnnotation:pin];
         [shoutsArray addObject:shout];
@@ -186,12 +187,18 @@
         MKAnnotationView *annView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
 
         
-        UIImage *image = [UIImage imageNamed:@"location.png"];
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        imageView.center = CGPointMake(0, -image.size.height/2);
-        imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-        [annView addSubview:imageView];
-        
+        UIImage *image = [UIImage imageNamed:@"pin.png"];
+        //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        //imageView.center = CGPointMake(0, -image.size.height/2);
+        //imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+        //UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] 
+         //                              initWithTarget:imageView action:@selector(handlePinButtonTap:)];
+        //tap.numberOfTapsRequired = 1;
+        //[annView addGestureRecognizer:tap];
+        //[annView addSubview:imageView];
+        annView.image = image;
+        annView.enabled = YES;
+        NSLog(@"TappyMake");
         //LEAVE HERE-The 1st and 4th lines directly below are needed for red pins
         //MKPinAnnotationView *pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
         //pinView.canShowCallout = YES;
@@ -203,10 +210,14 @@
     return nil;
 }
 
-//http://lists.apple.com/archives/cocoa-dev/2010/Aug/msg00718.html
-//http://stackoverflow.com/questions/6941199/how-to-get-click-event-from-a-button-added-over-mkannotationview
-//http://www.cocoabuilder.com/archive/cocoa/292188-iphone-add-touches-to-mkannotationview.html
-//https://www.google.com/search?hl=en&client=firefox-a&hs=c5u&rls=org.mozilla%3Aen-US%3Aofficial&q=MKAnnotationView+UIImageview+touch+event&oq=MKAnnotationView+UIImageview+touch+event&aq=f&aqi=&aql=&gs_sm=3&gs_upl=1315556l1316687l0l1316899l11l9l0l0l0l0l197l1178l1.8l9l0&gs_l=serp.3...1315556l1316687l0l1316899l11l9l0l0l0l0l197l1178l1j8l9l0
+- (void)mapView:(MKMapView *)sender didSelectAnnotationView:(MKAnnotationView *)aView{
+    NSLog(@"Tappyprototol");
+    [aView setImage:[UIImage imageNamed:@"pin_select.png"]];
+    DropPin * annotation = aView.annotation;
+    int current = annotation.shout_id;
+}
+
+
 
 
 - (void)viewDidUnload

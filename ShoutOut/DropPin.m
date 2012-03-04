@@ -10,7 +10,7 @@
 
 @implementation DropPin
 
-@synthesize coordinate, image;
+@synthesize coordinate, image,shout_id;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)coord {
     self = [super init];
