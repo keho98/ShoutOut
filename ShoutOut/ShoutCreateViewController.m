@@ -22,8 +22,7 @@
 /* UIImagePickerControllerDelegate Functions */
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage * newImage =[info objectForKey:UIImagePickerControllerOriginalImage];
-    [self.imageIcon performSelectorOnMainThread:@selector(setImage:) withObject: newImage waitUntilDone:YES];
+    [self.imageIcon performSelectorOnMainThread:@selector(setImage:) withObject: [info objectForKey:UIImagePickerControllerOriginalImage] waitUntilDone:YES];
     //self.imageIcon.image = newImage; DOES NOT WORK
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
 }
