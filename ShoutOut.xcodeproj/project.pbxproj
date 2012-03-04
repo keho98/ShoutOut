@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		872A3FB41502EC2A009823EA /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872A3FB21502EC2A009823EA /* ShoutCreateViewController.m */; };
-		872A3FB51502EC2A009823EA /* ShoutCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872A3FB31502EC2A009823EA /* ShoutCreateViewController.xib */; };
 		87F240C51502BD7200678277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C41502BD7200678277 /* UIKit.framework */; };
 		87F240C71502BD7200678277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C61502BD7200678277 /* Foundation.framework */; };
 		87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C81502BD7200678277 /* CoreGraphics.framework */; };
@@ -18,6 +16,7 @@
 		87F240D71502BD7200678277 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D61502BD7200678277 /* AppDelegate.m */; };
 		87F240DA1502BD7200678277 /* ShoutOut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */; };
 		87F240E21502BF4C00678277 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E11502BF4C00678277 /* MapViewController.m */; };
+		87F240E51502BF6300678277 /* ShoutCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240E41502BF6300678277 /* ShoutCreateViewController.m */; };
 		87F240E71502C48100678277 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240E61502C48100678277 /* MapKit.framework */; };
 		87F240FE1502DD4000678277 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240F31502DD4000678277 /* NSObject+SBJSON.m */; };
 		87F240FF1502DD4000678277 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240F51502DD4000678277 /* NSString+SBJSON.m */; };
@@ -32,9 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		872A3FB11502EC2A009823EA /* ShoutCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShoutCreateViewController.h; path = ../ShoutCreateViewController.h; sourceTree = "<group>"; };
-		872A3FB21502EC2A009823EA /* ShoutCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShoutCreateViewController.m; path = ../ShoutCreateViewController.m; sourceTree = "<group>"; };
-		872A3FB31502EC2A009823EA /* ShoutCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShoutCreateViewController.xib; path = ../ShoutCreateViewController.xib; sourceTree = "<group>"; };
 		87F240C01502BD7200678277 /* ShoutOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoutOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F240C41502BD7200678277 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,9 +62,6 @@
 		87F241041502DF9300678277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		87F241061502E11B00678277 /* ShoutFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutFetcher.h; sourceTree = "<group>"; };
 		87F241071502E11C00678277 /* ShoutFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutFetcher.m; sourceTree = "<group>"; };
-		A8702D441502EC560030F00D /* notuploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notuploaded.png; sourceTree = "<group>"; };
-		A8C684E91502FC0700605446 /* Shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shout.h; sourceTree = "<group>"; };
-		A8C684EA1502FC0800605446 /* Shout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,18 +114,14 @@
 		87F240CC1502BD7200678277 /* ShoutOut */ = {
 			isa = PBXGroup;
 			children = (
-				A8702D441502EC560030F00D /* notuploaded.png */,
 				87F240D51502BD7200678277 /* AppDelegate.h */,
 				87F240D61502BD7200678277 /* AppDelegate.m */,
-				872A3FB11502EC2A009823EA /* ShoutCreateViewController.h */,
-				872A3FB21502EC2A009823EA /* ShoutCreateViewController.m */,
-				872A3FB31502EC2A009823EA /* ShoutCreateViewController.xib */,
+				87F240E31502BF6300678277 /* ShoutCreateViewController.h */,
+				87F240E41502BF6300678277 /* ShoutCreateViewController.m */,
 				87F240E01502BF4C00678277 /* MapViewController.h */,
 				87F240E11502BF4C00678277 /* MapViewController.m */,
 				87F241061502E11B00678277 /* ShoutFetcher.h */,
 				87F241071502E11C00678277 /* ShoutFetcher.m */,
-				A8C684E91502FC0700605446 /* Shout.h */,
-				A8C684EA1502FC0800605446 /* Shout.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
 				87F240F01502DD4000678277 /* JSON */,
 				87F240CD1502BD7200678277 /* Supporting Files */,

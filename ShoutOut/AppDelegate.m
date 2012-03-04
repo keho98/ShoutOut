@@ -22,11 +22,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     MapViewController * view1 = [[MapViewController alloc] init];
-    ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] initWithNibName:@"ShoutCreateViewController" bundle:nil];    
+    ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] init];    
     
     UITabBarController * tbc = [[UITabBarController alloc] init];
-    view1.title = @"Map";
-    view2.title = @"Shout!";
     tbc.viewControllers = [NSArray arrayWithObjects:view1,view2, nil];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
