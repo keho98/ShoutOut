@@ -9,9 +9,7 @@
 #import "ShoutCreateViewController.h"
 
 @implementation ShoutCreateViewController
-@synthesize Textfield;
-@synthesize Description;
-@synthesize imageIcon;
+@synthesize textfield, description, imageIcon;
 @synthesize camera;
 
 
@@ -24,15 +22,18 @@
 {
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
     [(UIImageView*)[self.view viewWithTag:8] setContentMode: UIViewContentModeScaleAspectFit];
-    UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    //NSData *imageData = UIImageJPEGRepresentation(newImage, 1.0);
+    //NSString *imageDataEncoded = [Base64 base64StringFromData:imageData length:[imageData length]];
+    //NSString *encodedString = [NSData+Base64 initWithBase64EncodedString:imageData];
+    
     [(UIImageView*)[self.view viewWithTag:8] setImage:newImage];
 }
 
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
-    
     [[picker presentingViewController] dismissModalViewControllerAnimated: YES];
 }
-
 
 - (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
                                    usingDelegate: (id <UIImagePickerControllerDelegate>) delegate {
@@ -78,7 +79,7 @@
     int user_id = 6;
     float latitude = 5.32987;
     float longitude = 6.6659;
-    NSString *url = [NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/closestEvents/?user_id=%@&latitude=%@&=longitude=%@&", [NSString stringWithFormat:@"%i",user_id],[NSString stringWithFormat:@"%f",latitude], [NSString stringWithFormat:@"%f",longitude], Textfield.text, Description.text];
+    NSString *url = [NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/closestEvents/?user_id=%@&latitude=%@&=longitude=%@&", [NSString stringWithFormat:@"%i",user_id],[NSString stringWithFormat:@"%f",latitude], [NSString stringWithFormat:@"%f",longitude], textfield.text, description.text];
     [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [(UITabBarController*) self.parentViewController setSelectedIndex:0];
 }

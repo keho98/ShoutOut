@@ -17,6 +17,8 @@
     float longitude;
     NSString *createdAt;
     NSString *updatedAt;
+    UIImage *picSmall;
+    UIImage *picBig;
 }
 
 -(id)initShoutID:(NSNumber *)shoutIDIn title:(NSString *)titleIn description:(NSString *)descriptionIn popularity:(NSNumber *)popularityIn latitude:(NSNumber *)latitudeIn longitude:(NSNumber *)longitudeIn createdAt:(NSString *)createdAtIn updatedAt:(NSString *)updatedAtIn;
@@ -29,6 +31,8 @@
 @property(nonatomic) float longitude;
 @property(strong, nonatomic) NSString *createdAt;
 @property(strong, nonatomic) NSString *updatedAt;
+@property(strong, nonatomic) UIImage *picSmall;
+@property(strong, nonatomic) UIImage *picBig;
 
 
 @end

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShoutCreateViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
-@property (strong, nonatomic) IBOutlet UITextField *Textfield;
-@property (strong, nonatomic) IBOutlet UITextField *Description;
+@interface ShoutCreateViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
+    UIImage *newImage;
+}
+@property (strong, nonatomic) IBOutlet UITextField *textfield;
+@property (strong, nonatomic) IBOutlet UITextField *description;
 @property (strong, nonatomic) IBOutlet UIImageView *imageIcon;
 @property (strong, nonatomic) IBOutlet UIImageView *camera;
 
