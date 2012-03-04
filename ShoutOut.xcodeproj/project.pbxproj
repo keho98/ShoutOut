@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */; };
+		87713AC8150391E700CA6EE3 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AC3150391E700CA6EE3 /* camera.png */; };
+		87713AC9150391E700CA6EE3 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AC4150391E700CA6EE3 /* globe.png */; };
+		87713ACA150391E700CA6EE3 /* notuploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AC5150391E700CA6EE3 /* notuploaded.png */; };
+		87713ACB150391E700CA6EE3 /* speaker_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AC6150391E700CA6EE3 /* speaker_mini.png */; };
+		87713ACC150391E700CA6EE3 /* speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 87713AC7150391E700CA6EE3 /* speaker.png */; };
 		87F240C51502BD7200678277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C41502BD7200678277 /* UIKit.framework */; };
 		87F240C71502BD7200678277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C61502BD7200678277 /* Foundation.framework */; };
 		87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C81502BD7200678277 /* CoreGraphics.framework */; };
@@ -41,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutCreateViewController.xib; sourceTree = "<group>"; };
+		87713AC3150391E700CA6EE3 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		87713AC4150391E700CA6EE3 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		87713AC5150391E700CA6EE3 /* notuploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notuploaded.png; sourceTree = "<group>"; };
+		87713AC6150391E700CA6EE3 /* speaker_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_mini.png; sourceTree = "<group>"; };
+		87713AC7150391E700CA6EE3 /* speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker.png; sourceTree = "<group>"; };
 		87F240C01502BD7200678277 /* ShoutOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoutOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F240C41502BD7200678277 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +122,11 @@
 		87713AAB1503637E00CA6EE3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				87713AC3150391E700CA6EE3 /* camera.png */,
+				87713AC4150391E700CA6EE3 /* globe.png */,
+				87713AC5150391E700CA6EE3 /* notuploaded.png */,
+				87713AC6150391E700CA6EE3 /* speaker_mini.png */,
+				87713AC7150391E700CA6EE3 /* speaker.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,6 +282,11 @@
 				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
 				A8702D451502EC560030F00D /* (null) in Resources */,
 				874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */,
+				87713AC8150391E700CA6EE3 /* camera.png in Resources */,
+				87713AC9150391E700CA6EE3 /* globe.png in Resources */,
+				87713ACA150391E700CA6EE3 /* notuploaded.png in Resources */,
+				87713ACB150391E700CA6EE3 /* speaker_mini.png in Resources */,
+				87713ACC150391E700CA6EE3 /* speaker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

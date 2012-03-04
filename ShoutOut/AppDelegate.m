@@ -25,9 +25,10 @@
     ShoutCreateViewController * view2 = [[ShoutCreateViewController alloc] initWithNibName:@"ShoutCreateViewController" bundle:nil];    
     
     UITabBarController * tbc = [[UITabBarController alloc] init];
-    view1.title = @"Map";
-    view2.title = @"Shout!";
+    view1.tabBarItem.image = [UIImage imageNamed:@"globe.png"];
+    view2.tabBarItem.image = [UIImage imageNamed:@"speaker_mini.png"];
     tbc.viewControllers = [NSArray arrayWithObjects:view1,view2, nil];
+    
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = tbc;

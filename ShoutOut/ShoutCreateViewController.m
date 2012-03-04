@@ -56,16 +56,24 @@
     return YES;
 }
 
-/* end UIImagePickerControllerDelegate Functions */
 
 
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
     [self startCameraControllerFromViewController: self usingDelegate: self];
     
 }
+
+//Submit command
+//Should reset text fields and photo
 - (IBAction)pinch:(UIPinchGestureRecognizer *)sender {
-    NSLog(@"Pinch");
+    int user_id = 6;
+    float latitude = 5.32987;
+    float longitude = 6.6659;
+    NSString *url = [NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/closestEvents/?user_id=%@&latitude=%@&=longitude=%@&", [NSString stringWithFormat:@"%i",user_id],[NSString stringWithFormat:@"%f",latitude], [NSString stringWithFormat:@"%f",longitude], Textfield.text, Description.text];
+    [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
 }
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -91,7 +99,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self setTappableView:self.image];
     
 }
 
@@ -99,8 +106,6 @@
 {
     [self setTextfield:nil];
     [self setDescription:nil];
-    [self setDescription:nil];
-    [self setImageIcon:nil];
     [self setImageIcon:nil];
     [self setCamera:nil];
     [super viewDidUnload];
