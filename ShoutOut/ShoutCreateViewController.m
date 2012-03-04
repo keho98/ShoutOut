@@ -23,7 +23,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage * newImage =[info objectForKey:UIImagePickerControllerOriginalImage];
-    [(UIImageView*)[self.view viewWithTag:1] setImage:newImage];
+    [self.imageIcon setImage:newImage];
     //self.imageIcon.image = newImage; DOES NOT WORK
     [[picker presentingViewController] dismissModalViewControllerAnimated:YES];
 }
