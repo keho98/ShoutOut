@@ -11,12 +11,21 @@
 @implementation ShoutCreateViewController
 @synthesize Textfield;
 @synthesize Description;
+@synthesize image;
+@synthesize camera;
+
+- (IBAction)tap:(UITapGestureRecognizer *)sender {
+    NSLog(@"Hello!");
+}
+- (IBAction)pinch:(UIPinchGestureRecognizer *)sender {
+    NSLog(@"Pinch");
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        //image = [[UIImageView init] alloc];
     }
     return self;
 }
@@ -29,12 +38,14 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //[self setTappableView:self.image];
+    
 }
 
 - (void)viewDidUnload
@@ -42,6 +53,9 @@
     [self setTextfield:nil];
     [self setDescription:nil];
     [self setDescription:nil];
+    [self setImage:nil];
+    [self setImage:nil];
+    [self setCamera:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
