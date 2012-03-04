@@ -111,9 +111,10 @@
     [testDictionary2 setObject:@"Sat, 03 Mar 2012 23:16:37 UTC +00:00" forKey:@"created_at"];
     [testDictionary2 setObject:@"Sat, 03 Mar 2012 23:16:37 UTC +00:00" forKey:@"updated_at"];
     
-    NSArray *allShouts = [[NSArray alloc] initWithObjects:testDictionary, testDictionary2, nil];//[ShoutFetcher shoutQueryWithLongitude:mylong latitude:mylat];
-    
-    
+    [[ShoutFetcher alloc] init:self longitude:mylong latitude:mylat];
+}
+
+-(void)populateWithEvents:(NSArray*)allShouts {
     for (NSDictionary *shout in allShouts) {
         NSObject *id = [shout objectForKey:@"id"];
         
@@ -140,7 +141,7 @@
         
         Shout *shout = [[Shout alloc] initShoutID:[NSNumber numberWithInt:[[NSString stringWithFormat:@"%@", id] intValue]] 
                                             title:[NSString stringWithFormat:@"%@", title] 
-                                        description:[NSString stringWithFormat:@"%@", description] 
+                                      description:[NSString stringWithFormat:@"%@", description] 
                                        popularity:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", popularity] floatValue]] 
                                          latitude:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", latitude] floatValue]] 
                                         longitude:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", longitude] floatValue]] 

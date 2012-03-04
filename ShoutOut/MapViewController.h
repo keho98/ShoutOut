@@ -16,4 +16,6 @@
 
 @property(strong, nonatomic) NSMutableArray *shoutsArray;
 
+-(void)populateWithEvents:(NSArray*)allShouts;
+
 @end

@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SBJsonStreamParserAdapter.h"
 
-@interface ShoutFetcher : NSObject
+@interface ShoutFetcher : NSObject <SBJsonStreamParserAdapterDelegate> {
+    SBJsonStreamParserAdapter *adapter;
+    SBJsonStreamParser *parser;
+    NSURLConnection *connection;
+    NSObject *map;
+}
 
-+ (NSArray *)shoutQueryWithLongitude:(NSString *)longitude latitude:(NSString *)latitude;
+-(id)init:(NSObject*)mapIn longitude:(NSString *)longitude latitude:(NSString *)latitude;
 
 @end
