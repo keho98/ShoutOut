@@ -14,9 +14,22 @@
 @synthesize image;
 @synthesize camera;
 
+
+- (IBAction)end:(id)sender {
+    //Empty?
+}
+
+/* UIImagePickerControllerDelegate Functions */
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage * newImage =[info objectForKey:UIImagePickerControllerOriginalImage];
+    self.image.image = newImage;
+    
+}
+
 - (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
     
-    [[picker parentViewController] dismissModalViewControllerAnimated: YES];
+    [[picker presentingViewController] dismissModalViewControllerAnimated: YES];
 }
 
 - (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
@@ -32,12 +45,6 @@
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    // Displays a control that allows the user to choose picture or
-    // movie capture, if both are available:
-    cameraUI.mediaTypes =
-    [UIImagePickerController availableMediaTypesForSourceType:
-     UIImagePickerControllerSourceTypeCamera];
-    
     // Hides the controls for moving & scaling pictures, or for
     // trimming movies. To instead show the controls, use YES.
     cameraUI.allowsEditing = NO;
@@ -48,9 +55,10 @@
     return YES;
 }
 
+/* end UIImagePickerControllerDelegate Functions */
+
 
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
-    NSLog(@"Hello!");
     [self startCameraControllerFromViewController: self usingDelegate: self];
     
 }
