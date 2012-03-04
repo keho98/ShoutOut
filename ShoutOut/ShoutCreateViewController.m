@@ -9,12 +9,61 @@
 #import "ShoutCreateViewController.h"
 
 @implementation ShoutCreateViewController
+@synthesize Textfield;
+@synthesize Description;
+@synthesize image;
+@synthesize camera;
+
+- (void) imagePickerControllerDidCancel: (UIImagePickerController *) picker {
+    
+    [[picker parentViewController] dismissModalViewControllerAnimated: YES];
+}
+
+- (BOOL) startCameraControllerFromViewController: (UIViewController*) controller
+                                   usingDelegate: (id <UIImagePickerControllerDelegate>) delegate {
+    
+    if (([UIImagePickerController isSourceTypeAvailable:
+          UIImagePickerControllerSourceTypeCamera] == NO)
+        || (delegate == nil)
+        || (controller == nil))
+        return NO;
+    
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    // Displays a control that allows the user to choose picture or
+    // movie capture, if both are available:
+    cameraUI.mediaTypes =
+    [UIImagePickerController availableMediaTypesForSourceType:
+     UIImagePickerControllerSourceTypeCamera];
+    
+    // Hides the controls for moving & scaling pictures, or for
+    // trimming movies. To instead show the controls, use YES.
+    cameraUI.allowsEditing = NO;
+    
+    cameraUI.delegate = delegate;
+    
+    [controller presentModalViewController: cameraUI animated: YES];
+    return YES;
+}
+
+
+- (IBAction)tap:(UITapGestureRecognizer *)sender {
+    NSLog(@"Hello!");
+    [self startCameraControllerFromViewController: self usingDelegate: self];
+    
+}
+- (IBAction)pinch:(UIPinchGestureRecognizer *)sender {
+    NSLog(@"Pinch");
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        //image = [[UIImageView init] alloc];
     }
     return self;
 }
@@ -27,32 +76,24 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self setTappableView:self.image];
     
-    
-    UIImage *imageOfEvent = [UIImage imageNamed:@"notuploaded.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:imageOfEvent];
-    imageView.frame = CGRectMake(50, 50, imageOfEvent.size.width, imageOfEvent.size.height);
-    [self.view addSubview:imageView];
-    
-    UITextField * textField = [[UITextField alloc] initWithFrame:CGRectMake(30, 30, 100, 100)];
-    [textField setText:@"Hello World"];
-    [self.view addSubview:textField];
 }
 
 - (void)viewDidUnload
 {
+    [self setTextfield:nil];
+    [self setDescription:nil];
+    [self setDescription:nil];
+    [self setImage:nil];
+    [self setImage:nil];
+    [self setCamera:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

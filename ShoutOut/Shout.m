@@ -15,10 +15,10 @@
 -(id)initShoutID:(NSNumber *)shoutIDIn title:(NSString *)titleIn description:(NSString *)descriptionIn popularity:(NSNumber *)popularityIn latitude:(NSNumber *)latitudeIn longitude:(NSNumber *)longitudeIn createdAt:(NSString *)createdAtIn updatedAt:(NSString *)updatedAtIn {
     self = [super init];
     if (self) {
-        shoutID = shoutIDIn;
+        shoutID = [shoutIDIn intValue];
         title = titleIn;
         description = descriptionIn;
-        popularity = popularityIn;
+        popularity = [popularityIn floatValue];
         latitude = [latitudeIn floatValue];
         longitude = [longitudeIn floatValue];
         createdAt = createdAtIn;

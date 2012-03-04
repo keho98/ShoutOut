@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */; };
 		87F240C51502BD7200678277 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C41502BD7200678277 /* UIKit.framework */; };
 		87F240C71502BD7200678277 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C61502BD7200678277 /* Foundation.framework */; };
 		87F240C91502BD7200678277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240C81502BD7200678277 /* CoreGraphics.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutCreateViewController.xib; sourceTree = "<group>"; };
 		87F240C01502BD7200678277 /* ShoutOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoutOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F240C41502BD7200678277 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		87F240C61502BD7200678277 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,12 +123,13 @@
 			children = (
 				87F240D51502BD7200678277 /* AppDelegate.h */,
 				87F240D61502BD7200678277 /* AppDelegate.m */,
+				A8DC4D3D15032F3E0042A6B6 /* ShoutCreateViewController.h */,
+				A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */,
+				874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */,
 				87F240E01502BF4C00678277 /* MapViewController.h */,
 				87F240E11502BF4C00678277 /* MapViewController.m */,
 				87F241061502E11B00678277 /* ShoutFetcher.h */,
 				87F241071502E11C00678277 /* ShoutFetcher.m */,
-				A8DC4D3D15032F3E0042A6B6 /* ShoutCreateViewController.h */,
-				A8DC4D3E15032F3E0042A6B6 /* ShoutCreateViewController.m */,
 				A8DC4D4015032F6A0042A6B6 /* Shout.h */,
 				A8DC4D4115032F740042A6B6 /* Shout.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
@@ -219,6 +222,7 @@
 			files = (
 				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
 				A8702D451502EC560030F00D /* (null) in Resources */,
+				874CD40315033EDE00D11EBA /* ShoutCreateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

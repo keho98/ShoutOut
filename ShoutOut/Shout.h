@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Shout : NSObject {
-    NSNumber *shoutID;
+    int shoutID;
     NSString *title;
     NSString *description;
-    NSNumber *popularity;
+    float popularity;
     float latitude;
     float longitude;
     NSString *createdAt;
@@ -21,10 +21,10 @@
 
 -(id)initShoutID:(NSNumber *)shoutIDIn title:(NSString *)titleIn description:(NSString *)descriptionIn popularity:(NSNumber *)popularityIn latitude:(NSNumber *)latitudeIn longitude:(NSNumber *)longitudeIn createdAt:(NSString *)createdAtIn updatedAt:(NSString *)updatedAtIn;
 
-@property(strong, nonatomic) NSNumber *shoutID;
+@property(nonatomic) int shoutID;
 @property(strong, nonatomic) NSString *title;
 @property(strong, nonatomic) NSString *description;
-@property(strong, nonatomic) NSNumber *popularity;
+@property(nonatomic) float popularity;
 @property(nonatomic) float latitude;
 @property(nonatomic) float longitude;
 @property(strong, nonatomic) NSString *createdAt;

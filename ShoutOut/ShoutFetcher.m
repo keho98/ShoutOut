@@ -21,7 +21,7 @@
     SBJSON *parser = [[SBJSON alloc] init];
     
     // Prepare URL request to download statuses from Twitter
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://api.flickr.com/services/rest/?lat=%@&=long=%@&", longitude, latitude]]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/closestEvents/?latitude=%@&=longitude=%@&", latitude, longitude]]];
     
     NSLog(@"Sent Request With Coords: %@, %@", longitude, latitude);
 

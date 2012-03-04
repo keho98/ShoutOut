@@ -40,6 +40,15 @@
 }
 */
 
+-(void)changeShout:(int)index shoutDict:(NSDictionary *)shout {
+    ((Shout *)[shoutsArray objectAtIndex:index]).title = [NSString stringWithFormat:@"%@", [shout objectForKey:@"title"]];
+    ((Shout *)[shoutsArray objectAtIndex:index]).description = [NSString stringWithFormat:@"%@", [shout objectForKey:@"description"]];
+    ((Shout *)[shoutsArray objectAtIndex:index]).popularity = [[NSString stringWithFormat:@"%@", [shout objectForKey:@"popularity"]] floatValue];
+    ((Shout *)[shoutsArray objectAtIndex:index]).latitude = [[NSString stringWithFormat:@"%@", [shout objectForKey:@"latitude"]] floatValue];
+    ((Shout *)[shoutsArray objectAtIndex:index]).longitude = [[NSString stringWithFormat:@"%@", [shout objectForKey:@"longitude"]] floatValue];
+    ((Shout *)[shoutsArray objectAtIndex:index]).updatedAt = [NSString stringWithFormat:@"%@", [shout objectForKey:@"updated_at"]];
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -86,6 +95,18 @@
     
     for (NSDictionary *shout in allShouts) {
         NSObject *id = [shout objectForKey:@"id"];
+        
+        BOOL alreadyExists = NO;
+        for (int i = 0; i < [shoutsArray count]; i++){
+            if ([[shoutsArray objectAtIndex:i] shoutID] == [[NSString stringWithFormat:@"%@", id] intValue]){
+                alreadyExists = YES;
+                [self changeShout:i shoutDict:shout];
+                break;
+            }
+        }
+        if (alreadyExists)
+            continue;
+        
         NSObject *title = [shout objectForKey:@"title"];
         NSObject *description = [shout objectForKey:@"description"];
         NSObject *popularity = [shout objectForKey:@"popularity"];
@@ -99,7 +120,7 @@
         Shout *shout = [[Shout alloc] initShoutID:[NSNumber numberWithInt:[[NSString stringWithFormat:@"%@", id] intValue]] 
                                             title:[NSString stringWithFormat:@"%@", title] 
                                         description:[NSString stringWithFormat:@"%@", description] 
-                                       popularity:[NSNumber numberWithInt:[[NSString stringWithFormat:@"%@", popularity] intValue]] 
+                                       popularity:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", popularity] floatValue]] 
                                          latitude:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", latitude] floatValue]] 
                                         longitude:[NSNumber numberWithFloat:[[NSString stringWithFormat:@"%@", longitude] floatValue]] 
                                         createdAt:[NSString stringWithFormat:@"%@", createdAt] 
@@ -108,12 +129,13 @@
         [shoutsArray addObject:shout];
     }
     
-    NSLog(@"%@", [(Shout *)[shoutsArray objectAtIndex:0] shoutID]);
+    NSLog(@"%i", [(Shout *)[shoutsArray objectAtIndex:0] shoutID]);
     NSLog(@"%@", [(Shout *)[shoutsArray objectAtIndex:0] title]);
     NSLog(@"%@", [(Shout *)[shoutsArray objectAtIndex:0] description]);
-    NSLog(@"%@", [(Shout *)[shoutsArray objectAtIndex:0] popularity]);
+    NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] popularity]);
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] latitude]);
     NSLog(@"%f", [(Shout *)[shoutsArray objectAtIndex:0] longitude]);
+    NSLog(@"Num of Events: %i", [shoutsArray count]);
     
     region.span=span;
     region.center=location;
