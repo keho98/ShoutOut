@@ -44,7 +44,7 @@
 						<string key="NSFrame">{{20, 97}, {97, 31}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="436156529"/>
+						<reference key="NSNextKeyView" ref="969349174"/>
 						<string key="NSReuseIdentifierKey">_NS:304</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -67,11 +67,11 @@
 							<bool key="IBUIEnablesReturnKeyAutomatically">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="302416347">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="763628908">
 							<int key="type">1</int>
 							<double key="pointSize">22</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="107490342">
+						<object class="NSFont" key="IBUIFont" id="938409374">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">22</double>
 							<int key="NSfFlags">16</int>
@@ -91,7 +91,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<string key="IBUIText"/>
 						<int key="IBUIBorderStyle">3</int>
-						<string key="IBUIPlaceholder">Describe in 5 words</string>
+						<string key="IBUIPlaceholder">Tell it in 5 words</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
@@ -105,8 +105,8 @@
 							<int key="IBUIReturnKeyType">9</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="302416347"/>
-						<reference key="IBUIFont" ref="107490342"/>
+						<reference key="IBUIFontDescription" ref="763628908"/>
+						<reference key="IBUIFont" ref="938409374"/>
 					</object>
 					<object class="IBUIImageView" id="153810350">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -130,7 +130,7 @@
 						<string key="NSFrame">{{150, 38}, {150, 150}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="851515562"/>
+						<reference key="NSNextKeyView" ref="436156529"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -143,7 +143,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="969349174"/>
+				<reference key="NSNextKeyView" ref="851515562"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MC43ODgxOTIwODU2IDAuNzI1MTIwNTc4IDAuNjE0OTQwNzEzOAA</bytes>
