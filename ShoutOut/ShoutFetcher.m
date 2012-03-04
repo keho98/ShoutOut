@@ -33,6 +33,22 @@
     return self;
 }
 
+/*+(void)sendDataAsPostRequest:(NSString *)photoStringToSend longitude:(NSString *)longitude latitude:(NSString *)latitude {
+    adapter = [[SBJsonStreamParserAdapter alloc] init];
+    parser = [[SBJsonStreamParser alloc] init];
+    
+    adapter.delegate = self;
+    parser.delegate = adapter;
+    
+    NSString *url = [NSString stringWithFormat:@"http://shoutoutbackend.herokuapp.com/createAlternate/?latitude=%@&longitude=%@&photo=%@", latitude, longitude, photoStringToSend];
+    NSLog(@"%@\n", url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]
+                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                         timeoutInterval:60.0];
+    
+    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}*/
+
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     //NSLog(@"%@", jsonString);
@@ -44,6 +60,7 @@
     
     [(MapViewController*)map populateWithEvents:array];
 }
+
 
 - (void)parser:(SBJsonStreamParser*)parser foundArray:(NSArray*)array {
     //NSLog(@"FOUND ARRAY");

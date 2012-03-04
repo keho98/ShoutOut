@@ -10,9 +10,9 @@
 
 @implementation Shout
 
-@synthesize shoutID, title, description, popularity, latitude, longitude, createdAt, updatedAt;
+@synthesize shoutID, title, description, popularity, latitude, longitude, createdAt, updatedAt, picSmall, picBig;
 
--(id)initShoutID:(NSNumber *)shoutIDIn title:(NSString *)titleIn description:(NSString *)descriptionIn popularity:(NSNumber *)popularityIn latitude:(NSNumber *)latitudeIn longitude:(NSNumber *)longitudeIn createdAt:(NSString *)createdAtIn updatedAt:(NSString *)updatedAtIn {
+-(id)initShoutID:(NSNumber *)shoutIDIn title:(NSString *)titleIn description:(NSString *)descriptionIn popularity:(NSNumber *) popularityIn latitude:(NSNumber *)latitudeIn longitude:(NSNumber *)longitudeIn createdAt:(NSString *)createdAtIn updatedAt:(NSString *)updatedAtIn {
     self = [super init];
     if (self) {
         shoutID = [shoutIDIn intValue];
@@ -23,6 +23,8 @@
         longitude = [longitudeIn floatValue];
         createdAt = createdAtIn;
         updatedAt = updatedAtIn;
+        picSmall = [UIImage imageNamed:[NSString stringWithFormat:@"picsmall%i.png", shoutID-1]];
+        picBig = [UIImage imageNamed:[NSString stringWithFormat:@"picbig%i.png", shoutID-1]];
     }
     return self;
 }
