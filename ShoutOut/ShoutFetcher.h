@@ -10,6 +10,6 @@
 
 @interface ShoutFetcher : NSObject
 
-+ (NSDictionary *)shoutQueryWithLongitude:(NSString *)longitude latitude:(NSString *)latitude;
++ (NSArray *)shoutQueryWithLongitude:(NSString *)longitude latitude:(NSString *)latitude;
 
 @end

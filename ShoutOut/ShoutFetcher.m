@@ -31,7 +31,6 @@
     
     // parse the JSON response into an object
     // Here we're using NSArray since we're parsing an array of JSON status objects
-    
     return [parser objectWithString:json_string error:nil];
 }
 

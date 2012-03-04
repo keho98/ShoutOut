@@ -13,4 +13,7 @@
     MKMapView * mapView;
     CLGeocoder * geoCoder;
 }
+
+@property(strong, nonatomic) NSMutableArray *shoutsArray;
+
 @end
