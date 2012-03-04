@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "ShoutFetcher.h"
 
 @implementation MapViewController
 
@@ -53,8 +54,20 @@
     location.longitude = -122.4192;
     location.latitude = 37.7793;
     //# LOL
-    NSString * longitude = [NSString stringWithFormat:@"%f", location.longitude];
-    NSString * latitude = [NSString stringWithFormat:@"%f", location.latitude];
+    NSString * mylong = [NSString stringWithFormat:@"%f", location.longitude];
+    NSString * mylat = [NSString stringWithFormat:@"%f", location.latitude];
+    
+    NSArray *allShouts = [ShoutFetcher shoutQueryWithLongitude:mylong latitude:mylat];
+    
+    
+    for (NSDictionary *shout in allShouts)
+    {
+        // You can retrieve individual values using objectForKey on the status NSDictionary
+        // This will print the tweet and username to the console
+        NSObject *title = [shout objectForKey:@"title"];
+    }
+    
+    
     region.span=span;
     region.center=location;
     //[mapView setCenterCoordinate:location];

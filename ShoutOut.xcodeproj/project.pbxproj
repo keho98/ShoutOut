@@ -26,6 +26,8 @@
 		87F241031502DD4000678277 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F240FD1502DD4000678277 /* SBJsonWriter.m */; };
 		87F241051502DF9300678277 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F241041502DF9300678277 /* CoreLocation.framework */; };
 		87F241081502E11C00678277 /* ShoutFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F241071502E11C00678277 /* ShoutFetcher.m */; };
+		A8702D451502EC560030F00D /* notuploaded.png in Resources */ = {isa = PBXBuildFile; fileRef = A8702D441502EC560030F00D /* notuploaded.png */; };
+		A8C684EB1502FC0800605446 /* Shout.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C684EA1502FC0800605446 /* Shout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,9 @@
 		87F241041502DF9300678277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		87F241061502E11B00678277 /* ShoutFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutFetcher.h; sourceTree = "<group>"; };
 		87F241071502E11C00678277 /* ShoutFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutFetcher.m; sourceTree = "<group>"; };
+		A8702D441502EC560030F00D /* notuploaded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notuploaded.png; sourceTree = "<group>"; };
+		A8C684E91502FC0700605446 /* Shout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shout.h; sourceTree = "<group>"; };
+		A8C684EA1502FC0800605446 /* Shout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 		87F240CC1502BD7200678277 /* ShoutOut */ = {
 			isa = PBXGroup;
 			children = (
+				A8702D441502EC560030F00D /* notuploaded.png */,
 				87F240D51502BD7200678277 /* AppDelegate.h */,
 				87F240D61502BD7200678277 /* AppDelegate.m */,
 				87F240E31502BF6300678277 /* ShoutCreateViewController.h */,
@@ -122,6 +128,8 @@
 				87F240E11502BF4C00678277 /* MapViewController.m */,
 				87F241061502E11B00678277 /* ShoutFetcher.h */,
 				87F241071502E11C00678277 /* ShoutFetcher.m */,
+				A8C684E91502FC0700605446 /* Shout.h */,
+				A8C684EA1502FC0800605446 /* Shout.m */,
 				87F240D81502BD7200678277 /* ShoutOut.xcdatamodeld */,
 				87F240F01502DD4000678277 /* JSON */,
 				87F240CD1502BD7200678277 /* Supporting Files */,
@@ -211,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F240D11502BD7200678277 /* InfoPlist.strings in Resources */,
+				A8702D451502EC560030F00D /* notuploaded.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +242,7 @@
 				87F241021502DD4000678277 /* SBJsonParser.m in Sources */,
 				87F241031502DD4000678277 /* SBJsonWriter.m in Sources */,
 				87F241081502E11C00678277 /* ShoutFetcher.m in Sources */,
+				A8C684EB1502FC0800605446 /* Shout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +346,7 @@
 				87F240DF1502BD7200678277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

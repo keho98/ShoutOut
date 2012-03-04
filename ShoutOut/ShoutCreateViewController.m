@@ -39,6 +39,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    UIImage *imageOfEvent = [UIImage imageNamed:@"notuploaded.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:imageOfEvent];
+    imageView.frame = CGRectMake(50, 50, imageOfEvent.size.width, imageOfEvent.size.height);
+    [self.view addSubview:imageView];
+    
+    UITextField * textField = [[UITextField alloc] initWithFrame:CGRectMake(30, 30, 100, 100)];
+    [textField setText:@"Hello World"];
+    [self.view addSubview:textField];
 }
 
 - (void)viewDidUnload
