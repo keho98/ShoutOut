@@ -29,6 +29,7 @@
 		87F240E71502C48100678277 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F240E61502C48100678277 /* MapKit.framework */; };
 		87F241051502DF9300678277 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F241041502DF9300678277 /* CoreLocation.framework */; };
 		87F241081502E11C00678277 /* ShoutFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F241071502E11C00678277 /* ShoutFetcher.m */; };
+		A82A87A415043BBB00AC91B9 /* Background.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82A87A315043BBB00AC91B9 /* Background.xib */; };
 		A8427645150353B800D26C68 /* DropPin.m in Sources */ = {isa = PBXBuildFile; fileRef = A8427644150353B800D26C68 /* DropPin.m */; };
 		A8702D451502EC560030F00D /* (null) in Resources */ = {isa = PBXBuildFile; };
 		A88A23BA15040AFB00A622A8 /* picbig1.png in Resources */ = {isa = PBXBuildFile; fileRef = A88A23B015040AFB00A622A8 /* picbig1.png */; };
@@ -90,6 +91,7 @@
 		87F241041502DF9300678277 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		87F241061502E11B00678277 /* ShoutFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutFetcher.h; sourceTree = "<group>"; };
 		87F241071502E11C00678277 /* ShoutFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutFetcher.m; sourceTree = "<group>"; };
+		A82A87A315043BBB00AC91B9 /* Background.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Background.xib; sourceTree = "<group>"; };
 		A8427643150353B800D26C68 /* DropPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropPin.h; sourceTree = "<group>"; };
 		A8427644150353B800D26C68 /* DropPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropPin.m; sourceTree = "<group>"; };
 		A88A23B015040AFB00A622A8 /* picbig1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picbig1.png; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				874CD40215033EDE00D11EBA /* ShoutCreateViewController.xib */,
 				87F240E01502BF4C00678277 /* MapViewController.h */,
 				87F240E11502BF4C00678277 /* MapViewController.m */,
+				A82A87A315043BBB00AC91B9 /* Background.xib */,
 				87713B0E15041CB800CA6EE3 /* pin_select.png */,
 				87713B0F15041CB800CA6EE3 /* pin.png */,
 				87713B0815041CAB00CA6EE3 /* DropDownView.h */,
@@ -360,6 +363,7 @@
 				87713B0C15041CAC00CA6EE3 /* DropDownView.xib in Resources */,
 				87713B1015041CB900CA6EE3 /* pin_select.png in Resources */,
 				87713B1115041CB900CA6EE3 /* pin.png in Resources */,
+				A82A87A415043BBB00AC91B9 /* Background.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

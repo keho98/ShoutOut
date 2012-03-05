@@ -23,8 +23,8 @@
         longitude = [longitudeIn floatValue];
         createdAt = createdAtIn;
         updatedAt = updatedAtIn;
-        picSmall = [UIImage imageNamed:[NSString stringWithFormat:@"picsmall%i.png", shoutID-1]];
-        picBig = [UIImage imageNamed:[NSString stringWithFormat:@"picbig%i.png", shoutID-1]];
+        picSmall = [UIImage imageNamed:[NSString stringWithFormat:@"picsmall%i.png", shoutID]];
+        picBig = [UIImage imageNamed:[NSString stringWithFormat:@"picbig%i.png", shoutID]];
     }
     return self;
 }

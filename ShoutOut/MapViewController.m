@@ -13,7 +13,7 @@
 
 @implementation MapViewController
 
-@synthesize shoutsArray;
+@synthesize shoutsArray, locationManager, viewBackground;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -185,7 +185,7 @@
     if ([annotation isKindOfClass:[DropPin class]]) {
         static NSString *AnnotationIdentifier = @"AnnotationIdentifier";
         MKAnnotationView *annView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
-
+        
         
         UIImage *image = [UIImage imageNamed:@"pin.png"];
         //UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
@@ -210,13 +210,84 @@
     return nil;
 }
 
+- (void)undoAnimation {
+    CGRect basketTopFrame = view.frame;
+    basketTopFrame.origin.y = -view.frame.size.height;//view.frame.size.height/4;
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelay:0.1];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    
+    view.frame = basketTopFrame;
+    
+    [UIView commitAnimations];
+    
+    [viewBackground setAlpha:0.0];
+    
+    view = nil;
+    viewBackground = nil;
+    
+}
+
 - (void)mapView:(MKMapView *)sender didSelectAnnotationView:(MKAnnotationView *)aView{
     NSLog(@"Tappyprototol");
     [aView setImage:[UIImage imageNamed:@"pin_select.png"]];
     DropPin * annotation = aView.annotation;
     int current = annotation.shout_id;
+    
+    
+    viewBackground = [[[NSBundle mainBundle] loadNibNamed: @"Background"
+                                                  owner: self options: nil] objectAtIndex:0];
+    [viewBackground setAlpha:0.8];
+    [self.view addSubview:viewBackground];
+    
+    Shout *currentShout = nil;
+    for (int i = 0; i < [shoutsArray count]; i++){
+        if ([(Shout *)[shoutsArray objectAtIndex:0] shoutID] == current){
+            currentShout = [shoutsArray objectAtIndex:i];
+            break;
+        }
+    }
+    
+    
+    view = [[[NSBundle mainBundle] loadNibNamed: @"DropDownView"
+                                                  owner: self options: nil] objectAtIndex:0];
+    
+    [(UIImageView *)[view viewWithTag:3] setImage:[currentShout picSmall]];
+    [(UITextView *)[view viewWithTag:4] setText:[currentShout title]];
+    [(UITextView *)[view viewWithTag:5] setText:[currentShout description]];
+    
+    
+    //view.frame = CGRectMake(0, 0, 320, 480);
+    
+    view.frame= CGRectMake(0,-view.frame.size.height,view.frame.size.width,view.frame.size.height);
+    
+    //button.frame.size.width                        
+    
+    
+    CGRect basketTopFrame = view.frame;
+    basketTopFrame.origin.y = 0;//view.frame.size.height/4;
+     
+     [UIView beginAnimations:nil context:nil];
+     [UIView setAnimationDuration:0.5];
+     [UIView setAnimationDelay:0.1];
+     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+     
+     view.frame = basketTopFrame;
+     
+     [UIView commitAnimations];
+     
+     
+     
+    [view setAlpha:0.9];
+    [self.view addSubview:view];
+    
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {    
+    [self undoAnimation];
+}
 
 
 
